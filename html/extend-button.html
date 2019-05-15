@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<style>
+#btn {
+    position: fixed;
+    right: 9px;
+    bottom: 9px;
+    max-width: 200px;
+    z-index: 21;
+    border-radius: 50px;
+}
+
+button span {
+    max-width: 0;
+    -webkit-transition: max-width 1s;
+    transition: max-width 1s;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+button:hover span {
+    max-width: 7rem;
+}
+</style>
+<body style="height: 10000;">
+
+    <div class="container">
+        <ul class="nav">
+            <li class="nav-item">
+                <h3>html</h3>
+            </li>
+        </ul>
+
+        <a href="#">
+            <button id="btn" class="btn btn-primary"> 
+                <i class="far fa-question-circle"></i>
+                <span>Bantuan</span>
+            </button>
+        </a>
+
+    </div>
+</body>
+</html>

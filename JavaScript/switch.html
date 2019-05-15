@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+ 
+function display() {
+ 
+document.link.getlink[0].value = 'You Are a Male';
+document.link.getlink[1].value = 'You Are a Female';
+ 
+for (var i=0; i < 2; i++)
+   {
+   if (document.link.getlink[i].checked)
+      {
+      document.link.output.value = document.link.getlink[i].value;
+      }
+   }
+}
+
+</script>
+</head>
+<body>
+ 
+<form name="link" action="" method="post">
+<input type="radio" name="getlink" onclick="javascript:display(document.link.getlink[0].value)" />male
+<input type="radio" name="getlink" onclick="javascript:display(document.link.getlink[1].value)" />female
+<br>
+<textarea rows="4" cols="35" name="output"></textarea>
+</form>
+</body>
+</html>
+ 
