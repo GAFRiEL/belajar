@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gafriel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<style>
+.container-profile {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-light">
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li onclick="document.getElementById('id01').style.display='block'" class="nav-item">
+                <a class="nav-link" href="#profile">profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#calculator">calculator</a>
+            </li>
+        </ul>
+
+    </nav> <br>
+    
+    <div class="container w-100">
+         
+        <div class="" id="calculator">
+            <h1 class="text-center">Calculator</h1>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="angka1" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                  <center>
+                    +
+                  </center>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="angka2" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Hasil</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="hasil" disabled />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                  <button type="submit" id="hitung" class="btn btn-primary">
+                    Hitung
+                  </button>
+                </div>
+            </div>
+        </div>
+        <div id="id01" class="modal">
+
+            <div class="modal-content animate">
+          
+                <div class="container-profile">
+                    <h5 class="card-title text-center">Muhammad Gafriel Alfarizhi</h5>
+                    <h5 class="card-title text-center">647104020220002</h5>
+                    <p class="card-text pl-md-4">
+                        <table class="">
+                            <tr>
+                                <td class="text-right">Tempat/Tg Lahir</td>
+                                <td>: BALIKPAPAN, 02-02-2002</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Jenis Kelamin</td>
+                                <td>: Laki-Laki</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Gol. Darah</td>
+                                <td>: -</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Alamat</td>
+                                <td>: Jl. JEND.A. YANI NO.57</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">RT/RW</td>
+                                <td>: 049/000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Kel/Desa</td>
+                                <td>: GUNUNGSARI ILIR</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Kecamatan</td>
+                                <td>: BALIKPAPAN TENGAH</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Agama</td>
+                                <td>: ISLAM</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Status Perkawinan</td>
+                                <td>: BELUM KAWIN</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Pekerjaan</td>
+                                <td>: PELAJAR/MAHASISWA</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Kewarganegaraan</td>
+                                <td>: WNI</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Berlaku Hingga</td>
+                                <td>: SEUMUR HIDUP</td>
+                            </tr>
+                        </table>
+                    </p>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// calculator
+$(document).ready(function() {
+        $("#hitung").click(function() {
+          var angka1 = $("#angka1").val();
+          var angka2 = $("#angka2").val();
+
+          var jumlah = parseInt(angka1) + parseInt(angka2);
+
+          $("#hasil").val(jumlah);
+        });
+      });
+</script>
+
+</body>
+
+</html>
