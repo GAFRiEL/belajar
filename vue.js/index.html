@@ -12,55 +12,29 @@
             height: 40px;
             margin: 5px 0 0 0;
         }
+        .col-md-1 {
+            height: 60px;
+        }
+        .cart {
+            width: 110px;
+            height: 60px;
+        }
+        .cart p {
+            text-align: center;
+            line-height: 60px;
+            right: 10px;
+            top: 10px;
+        }
     </style>
 </head>
 <body>
 
-    <ul class="nav">
-        <li class="nav-item">
-            <h2 class="nav-link disabled">Vue.js</h2>
-        </li>
-    </ul>
-
-    <div class="container row" id="app">
-
-        <div class="col-md-3">
-            <img :src="image" class="w-100">
+    <div class="nav bg-secondary" style="height: 50px;"></div><br>
+    <div id="app">
+        <div class="mr-md-3 cart border float-right">
+            <p>Cart ({{ cart.length }})</p>
         </div>
-
-        <div>
-            <h3>{{ product }}</h3>
-            
-            <p v-if="inventory">In Stock</p>
-            <p v-else="">Out Of Stock</p>
-
-            <ul>
-                <li v-for="detail in details">{{ detail }}</li>
-            </ul>
-
-            <div v-for="variant in variants"
-                :key="variant.variantId"
-                class="color-box"
-                :style="{ backgroundColor: variant.variantColor }"
-                @mouseover="updateProduct(variant.variantImage)"
-            >
-            </div><br>
-
-            <div class="row">
-                <button v-on:click="addToCart" 
-                        :disabled="!inventory"
-                        class="btn btn-secondary col-md">
-                        Add to Cart
-                </button>
-
-                <button class="btn ml-md-2 border border-secondary disabled">
-                    Cart({{ cart }})
-                </button>
-            </div>
-            
-        </div>
-
-        
+        <product :premium="premium" @add-to-cart="updateCart"></product>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
