@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <me ta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>learn vue.js</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="vue/vue.js"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <a class="navbar-brand" href="index.html">Home</a>
+    </nav><br>
+
+    <div id="app">
+        <div class="mr-md-3 cart border float-right">
+            <p>Cart ({{ cart.length }})</p>
+        </div>
+        <product :premium="premium" @add-to-cart="updateCart"></product>
+    </div>
+
+    <script src="vue.js"></script>
+</body>
+</html>
