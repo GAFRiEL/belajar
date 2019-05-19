@@ -16,13 +16,13 @@
         <a class="navbar-brand" href="index.html">Home</a>
     </nav><br>
 
-    <div id="app">
-        <div class="mr-md-3 cart border float-right">
-            <p>Cart ({{ cart.length }})</p>
+    <div id="shop">
+        <div class="btn btn-outline-secondary button">
+            Cart ({{ cart.length }})
         </div>
         <product :premium="premium" @add-to-cart="updateCart"></product>
     </div>
 
-    <script src="vue.js"></script>
+    <script src="vue/shop.js"></script>
 </body>
 </html>

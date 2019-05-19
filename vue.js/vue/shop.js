@@ -93,8 +93,8 @@ Vue.component('product', {
 
 })
 
-var app = new Vue({
-    el: '#app',
+var shop = new Vue({
+    el: '#shop',
     data: {
         premium: false,
         cart: []
