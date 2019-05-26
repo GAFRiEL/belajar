@@ -14,6 +14,9 @@
 
         <ul class="navbar-nav">
             <li class="nav-item active">
+                <a class="nav-link" class="text-decoration-none" href="../welcome.html">Projects</a>
+            </li>
+            <li class="nav-item active text-right">
                 <a class="nav-link" class="text-decoration-none" href="index.php">HOME</a>
             </li>
         </ul>
