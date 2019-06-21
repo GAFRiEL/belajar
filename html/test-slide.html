@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Carousel</title>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+	.carousel-inner {
+		background-image: url(img/penghargaan-abstract-yellow-cover.png);
+		height: 452px;
+	}
+</style>
+
+</head>
+<body>
+
+	<div id="carouselExampleIndicators" class="carousel slide p-5" data-ride="carousel">
+	<!-- {{-- slider --}} -->
+	<div class="carousel-inner" role="listbox">
+		<div class="carousel-item active">
+			<div class="row justify-content-center no-gutters m-5">
+				<div class="col-md-4 mr-md-4 bg-white p-2">
+					<img src="img/1.jpg" class="w-100" data-src="holder.js/900x400?theme=social" data-holder-rendered="true">
+				</div>
+				<div class="col-md-4 ml-md-4 p-md-4 text-white">
+					<h2>Penghargaan Unit Penyelenggara Pelayanan Publik</h2> <hr class="txt-ln">
+					<p>POLRES BALIKPAPAN mendapatkan penghargaan Unit Penyelenggara Pelayanan Publik Kategori "Baik" pada tahun 2018</p>
+				</div>
+			</div> <br>
+		</div>
+		<div class="carousel-item">
+			<div class="row justify-content-center no-gutters m-5">
+				<div class="col-md-4 mr-md-4 bg-white p-2">
+					<img src="img/2.jpg" class="w-100"  data-src="holder.js/900x400?theme=social" data-holder-rendered="true">
+				</div>
+				<div class="col-md-4 ml-md-4 p-md-4 text-white">
+					<h2>Penghargaan Pelayanan Penerbitan SIM Terbaik</h2> <hr class="txt-ln">
+					<p>POLRES BALIKPAPAN mendapatkan Penghargaan Pelayanan Penerbitan SIM Terbaik di Lingkungan POLRI Tahun 2017 Hasil Penilaian OMBUDSMAN RI dengan nilai 107.0</p>
+				</div>
+			</div>
+		</div> <br>
+		<div class="carousel-item">
+			<div class="row justify-content-center no-gutters m-5">
+				<div class="col-md-4 mr-md-4 bg-white p-2">
+					<img src="img/3.jpg" class="w-100"  data-src="holder.js/900x400?theme=social" data-holder-rendered="true">
+				</div>
+				<div class="col-md-4 ml-md-4 p-md-4 text-white">
+					<h2>Penghargaan Role Model Penyelenggaraan Pelayanan Publik</h2> <hr class="txt-ln">
+					<p>POLRES BALIKPAPAN mendapatkan Penghargaan Role Model Penyelenggaraan Pelayanan Publik Kategori "Sangat Baik" Berdasarkan hasil evaluasi Terhadap 72 Kabupaten-Kota Role Model sesuai dengan KepMenPAN Nomor 27 Tahun 2017 Tentang Penetapan Provinsi</p>
+				</div>
+			</div>
+		</div> <br>
+
+		<!-- {{-- indicators --}} -->
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	</ol>
+	</div>
+</div>
+
+</body>
+</html>

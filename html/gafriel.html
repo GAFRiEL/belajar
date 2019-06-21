@@ -72,40 +72,43 @@
     
     <div class="container w-100">
          
-        <div class="" id="calculator">
+        <div class="">
             <h1 class="text-center">Calculator</h1>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="angka1" />
+                <input type="text" class="form-control" id="angka1" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Operator</label>
+                <div class="col-sm-10">
+                <select class="border-0 custom-select text-center" id="operator">
+                    <option disabled selected>Pilih</option>
+                    <option value="tambah">+</option>
+                    <option value="kurang">-</option>
+                    <option value="kali">*</option>
+                    <option value="bagi">/</option>
+                </select>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                  <center>
-                    +
-                  </center>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="angka2" />
+                <input type="text" class="form-control" id="angka2" />
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Hasil</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="hasil" disabled />
+                <input type="text" class="form-control" id="hasil" disabled />
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                  <button type="submit" id="hitung" class="btn btn-primary">
+                <button type="submit" id="hitung" class="btn btn-primary">
                     Hitung
-                  </button>
+                </button>
                 </div>
             </div>
         </div>
@@ -175,25 +178,57 @@
     </div>
 
 <script>
-// Get the modal
-var modal = document.getElementById('id01');
+    $(document).ready(function() {
+        // global var
+        var angka1 = 0;
+        var angka2 = 0;
+        var operator = "";
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+        // operate
+        function hitung() {
+          var hasil = 0;
+          angka1 = parseInt(angka1);
+          angka2 = parseInt(angka2);
 
-// calculator
-$(document).ready(function() {
+          switch (operator) {
+            case 'tambah':
+              hasil = angka1 + angka2;
+              break;
+            case 'kurang':
+              hasil = angka1 - angka2;
+              break;
+            case 'kali':
+              hasil = angka1 * angka2;
+              break;
+            case 'bagi':
+              hasil = angka1 / angka2;
+              break;
+
+            default:
+              hasil = "pilih operator dulu gblk"
+              break;
+          }
+
+          return hasil;
+
+        }
+
+        // operator
+        $("#operator").change(function () {
+          operator = $(this).val();
+        });
+
+        // hitung
         $("#hitung").click(function() {
-          var angka1 = $("#angka1").val();
-          var angka2 = $("#angka2").val();
+          angka1 = $("#angka1").val();
+          angka2 = $("#angka2").val();
 
-          var jumlah = parseInt(angka1) + parseInt(angka2);
+          // jumlah
+          var jumlah = hitung();
 
+          // data
           $("#hasil").val(jumlah);
+
         });
       });
 </script>
